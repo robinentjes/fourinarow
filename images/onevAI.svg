@@ -15,10 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="onevAI.svg"
-   inkscape:export-filename="C:\Users\robin\Documents\vieropeenrij\images\onevAI.png"
-   inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   sodipodi:docname="onevAI.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,16 +25,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="154.275"
-     inkscape:cy="115.33497"
+     inkscape:zoom="1"
+     inkscape:cx="110.75917"
+     inkscape:cy="125.61795"
      inkscape:document-units="mm"
-     inkscape:current-layer="g835"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="2400"
-     inkscape:window-height="1271"
-     inkscape:window-x="-9"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
      showguides="false" />
@@ -58,19 +55,9 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-257.31248)">
-    <rect
-       style="opacity:1;fill:#ff8080;fill-opacity:1;stroke:none;stroke-width:0.95574951;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect815"
-       width="105.83334"
-       height="39.687485"
-       x="0"
-       y="257.3125"
-       ry="6.2226295"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96" />
     <g
        id="g834"
-       transform="matrix(3.0411967,0,0,3.2584239,-8.143298,-660.19762)"
+       transform="matrix(3.0411967,0,0,3.2584239,-120.06205,-660.19762)"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96">
       <text
@@ -96,44 +83,38 @@
            y="441.45755"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05555534px;font-family:Magneto;-inkscape-font-specification:Magneto;fill:#cccccc;stroke-width:0.26458332" /></text>
     </g>
-    <path
-       style="opacity:1;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.95574945;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 5.9972225,257.31249 c -3.322661,0 -5.99722184666668,2.1492 -5.99722184666668,4.81918 v 30.0491 c 8e-8,2.67 2.67456084666668,4.8192 5.99722184666668,4.8192 H 99.836108 c 3.322662,0 5.997222,-2.1492 5.997222,-4.8192 v -30.0491 c 0,-2.66998 -2.67456,-4.81918 -5.997222,-4.81918 z m 1.2416127,0.89805 H 98.5945 c 3.17235,0 5.72712,2.05185 5.72712,4.60106 v 28.68926 c 0,2.54921 -2.55477,4.60215 -5.72712,4.60215 H 7.2388352 c -3.1723507,0 -5.7271266,-2.05294 -5.7271266,-4.60215 V 262.8116 c 0,-2.54921 2.5547759,-4.60106 5.7271266,-4.60106 z"
-       id="rect825"
-       inkscape:connector-curvature="0"
+    <rect
+       style="opacity:1;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.6557135;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect828"
+       width="105.83334"
+       height="39.6875"
+       x="-5.0862632e-06"
+       y="257.31247"
+       ry="1.8304677"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
-    <g
-       id="g835"
-       transform="translate(-5.1020956e-7,1.5493037)"
+    <rect
+       ry="1.7084367"
+       y="258.63541"
+       x="1.3229166"
+       height="37.041668"
+       width="103.1875"
+       id="rect830"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.62551081;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96">
-      <g
-         id="g841"
-         transform="translate(-11.35678,-0.37766757)">
-        <text
-           id="text828"
-           y="281.8685"
-           x="25.590208"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:42.25;font-family:Magneto;-inkscape-font-specification:Magneto;letter-spacing:0px;word-spacing:0px;fill:#ff5555;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           xml:space="preserve"><tspan
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:Magneto;-inkscape-font-specification:Magneto;fill:#ff5555;stroke-width:0.26458332"
-             y="281.8685"
-             x="25.590208"
-             id="tspan826"
-             sodipodi:role="line">1 Vs Ai</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;line-height:42.25;font-family:Magneto;-inkscape-font-specification:Magneto;letter-spacing:0px;word-spacing:0px;fill:#cccccc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-           x="23.625776"
-           y="283.08456"
-           id="text824"><tspan
-             sodipodi:role="line"
-             id="tspan822"
-             x="23.625776"
-             y="283.08456"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:Magneto;-inkscape-font-specification:Magneto;fill:#cccccc;stroke-width:0.26458332">1 Vs Ai</tspan></text>
-      </g>
-    </g>
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.11111069px;line-height:42.25;font-family:monospace;-inkscape-font-specification:monospace;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="19.068605"
+       y="281.42471"
+       id="text834"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan832"
+         x="19.068605"
+         y="281.42471"
+         style="font-size:14.11111069px;stroke-width:0.26458332">1 Vs. AI</tspan></text>
   </g>
 </svg>

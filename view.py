@@ -1,17 +1,17 @@
 import pygame
 from pygame import image as img
+from coin import Coin
+from button import Button
 
 class View:
 
     def __init__(self, width, height, margin, screen):
         # Define some colors
         pygame.font.init()
-        self.font = pygame.font.Font('MAGNETOB.TTF', 60)
+        self.font = pygame.font.SysFont('Monospace', 60)
+
         self.BLACK = (0, 0, 0)
         self.WHITE = (255, 255, 255)
-        self.GREEN = (0, 255, 0)
-        self.RED = (255, 0, 0)
-        self.YELLOW = (255,255,0)
         self.BLUE = (88, 114, 234)
 
 
@@ -23,16 +23,6 @@ class View:
         self.personIcon = img.load('images/personicon.png')
         self.robotIcon = img.load('images/roboticon.png')
 
-        self.yellowCoin = img.load('images/yellowcoin.png')
-        self.redCoin = img.load('images/redcoin.png')
-        self.blackCoin = img.load('images/blackcoin.png')
-        self.yellowCoinTrans = self.yellowCoin.copy()
-        self.yellowCoinTrans.set_alpha(200)
-        self.redCoinTrans = self.redCoin.copy()
-        self.redCoinTrans.set_alpha(200)
-
-        self.mainMenuButton = img.load('images/mainmenubutton.png')
-        self.restartButton = img.load('images/restartbutton.png')
 
         # This sets the WIDTH and HEIGHT of each grid location
         self.WIDTH = width
@@ -57,18 +47,18 @@ class View:
         ))
         for row in range(6):
             for column in range(7):
-                coin = self.blackCoin
+                coin = Coin.black
                 if board[row][column] == 1:
-                    coin = self.yellowCoin
+                    coin = Coin.yellow
                 elif board[row][column] == 2:
-                    coin = self.redCoin
+                    coin = Coin.red
 
                 self.screen.blit(coin, (((self.MARGIN + self.WIDTH) * column + self.MARGIN),
                                                         ((self.MARGIN + self.HEIGHT) * row) + 150))
 
 
     def hoverStone(self, currentPlayer, column):
-        coin = self.yellowCoinTrans if currentPlayer == 1 else self.redCoinTrans
+        coin = Coin.yellowTrans if currentPlayer == 1 else Coin.redTrans
         self.screen.blit(coin, (((self.MARGIN + self.WIDTH) * column + self.MARGIN), 40))
 
 
@@ -92,8 +82,8 @@ class View:
 
 
     def drawButtons(self):
-        self.screen.blit(self.restartButton, (753, 650))
-        self.screen.blit(self.mainMenuButton, (986, 650))
+        self.screen.blit(Button.restart, (753, 650))
+        self.screen.blit(Button.mainMenu, (986, 650))
 
 
     def quit(self):

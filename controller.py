@@ -24,6 +24,7 @@ class Controller:
 
         pygame.init()
 
+
     def mainMenuControl(self):
         self.__mainMenuView.display()
         pygame.display.flip()

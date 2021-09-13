@@ -1,11 +1,10 @@
 import pygame
 from pygame import image as img
+from button import Button
+
 class GameDoneView:
     def __init__(self, screen):
         self.screen = screen
-
-        self.mainMenuButton = img.load('images/mainmenubutton.png')
-        self.restartButton = img.load('images/restartbutton.png')
 
         self.personIcon = img.load('images/personicon.png')
         self.yellowBorder = img.load('images/yellowborder.png')
@@ -27,5 +26,5 @@ class GameDoneView:
             self.screen.blit(self.personIcon, (415,180))
             self.screen.blit(self.redBorder, (410, 175))
 
-        self.screen.blit(self.mainMenuButton, (360, 500))
-        self.screen.blit(self.restartButton, (660, 500))
+        self.screen.blit(Button.mainMenu, (360, 500))
+        self.screen.blit(Button.restart, (660, 500))
