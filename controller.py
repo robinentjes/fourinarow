@@ -4,6 +4,8 @@ from mainmenuView import MainMenuView
 from gameDoneView import GameDoneView
 import pygame
 import sys
+import copy
+import AIplayer
 
 class Controller:
 
@@ -39,9 +41,9 @@ class Controller:
                     position = pygame.mouse.get_pos()
                     (x, y) = (position[0], position[1])
                     if x > 410 and x < 810 and y > 150 and y < 300:
-                        self.gameControl()
+                        self.gameControl("human")
                     if x > 410 and x < 810 and y > 450 and y < 600:
-                        print("1vAI")
+                        self.gameControl("ai")
             self.__mainMenuView.display()
             pygame.display.flip()
 
@@ -71,7 +73,7 @@ class Controller:
 
 
 
-    def gameControl(self):
+    def gameControl(self, gameMode):
         currentPlayer = 1
         currentCol = 0
         self.__board.clearBoard()
@@ -85,30 +87,39 @@ class Controller:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     exit()
+
+                position = pygame.mouse.get_pos()
+                currentCol = position[0] // (self.__view.WIDTH + self.__view.MARGIN)
+                currentCol = -1 if currentCol > 6 else currentCol
+
+                if gameMode == "ai" and currentPlayer == -1:
+                    move = AIplayer.decideMove(self.__board)
+                    self.__board.addStone(-1, move)
+                    if self.__board.isWin(-1, move):
+                        ret = self.gameDoneController(-1)
+                        if ret == "main":
+                            return
+                    currentPlayer = 1
+
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     if currentCol != -1:
-                        position = pygame.mouse.get_pos()
-                        self.__board.addStone(currentCol, currentPlayer)
+                        if not self.__board.canPlay(currentCol):
+                            continue
+                        self.__board.addStone(currentPlayer, currentCol)
                         checkWin = self.__board.isWin(currentPlayer, currentCol)
                         if checkWin:
-                            # TODO
                             ret = self.gameDoneController(currentPlayer)
                             if ret == "main":
                                 return
                         else:
-                            currentPlayer = 2 if currentPlayer == 1 else 1
+                            currentPlayer = - currentPlayer
                     else:
-                        position = pygame.mouse.get_pos()
                         (x, y) = (position[0], position[1])
                         if x > 753 and x < 953 and y > 650 and y < 720:
                             self.__board.clearBoard()
                         elif x > 986 and x < 1186 and y > 650 and y < 720:
                             return
-                position = pygame.mouse.get_pos()
 
-                currentCol = position[0] // (self.__view.WIDTH + self.__view.MARGIN)
-                if currentCol > 6:
-                    currentCol = -1
 
             self.__view.drawGrid(self.__board.getBoard())
             self.__view.drawPlayers(currentPlayer)

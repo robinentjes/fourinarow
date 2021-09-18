@@ -15,7 +15,10 @@ class GameDoneView:
 
 
     def display(self, winner):
-        pygame.draw.rect(self.screen, (150,150,200), (260, 125, 700, 500))
+        #pygame.draw.rect(self.screen, (150,150,200), (260, 125, 700, 500))
+        s = pygame.Surface((700,500), pygame.SRCALPHA)
+        s.fill((150,150,200, 150))
+        self.screen.blit(s, (260, 125))
 
         if winner == 1:
             self.screen.blit(self.yellowBorderBackground, (410, 175))

@@ -50,7 +50,7 @@ class View:
                 coin = Coin.black
                 if board[row][column] == 1:
                     coin = Coin.yellow
-                elif board[row][column] == 2:
+                elif board[row][column] == -1:
                     coin = Coin.red
 
                 self.screen.blit(coin, (((self.MARGIN + self.WIDTH) * column + self.MARGIN),
