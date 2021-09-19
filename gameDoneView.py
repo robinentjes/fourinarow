@@ -13,21 +13,23 @@ class GameDoneView:
         self.redBorderBackground = img.load('images/redborderbackground.png')
         self.redBorder = img.load('images/redborder.png')
 
+        self.font = pygame.font.SysFont('monospace',  60)
+
 
     def display(self, winner):
-        #pygame.draw.rect(self.screen, (150,150,200), (260, 125, 700, 500))
         s = pygame.Surface((700,500), pygame.SRCALPHA)
-        s.fill((150,150,200, 150))
+        s.fill((255,255,255, 200))
         self.screen.blit(s, (260, 125))
 
         if winner == 1:
-            self.screen.blit(self.yellowBorderBackground, (410, 175))
-            self.screen.blit(self.personIcon, (415,180))
-            self.screen.blit(self.yellowBorder, (410, 175))
+            text = self.font.render("Player 1 won!", False, (0,0,0))
+            self.screen.blit(text, (380, 175))
+        elif winner == -1:
+            text = self.font.render("Player 2 won!", False, (0,0,0))
+            self.screen.blit(text, (380, 175))
         else:
-            self.screen.blit(self.redBorderBackground, (410, 175))
-            self.screen.blit(self.personIcon, (415,180))
-            self.screen.blit(self.redBorder, (410, 175))
+            text = self.font.render("Tie!", False, (0,0,0))
+            self.screen.blit(text, (580, 175))
 
         self.screen.blit(Button.mainMenu, (360, 500))
         self.screen.blit(Button.restart, (660, 500))

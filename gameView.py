@@ -3,7 +3,7 @@ from pygame import image as img
 from coin import Coin
 from button import Button
 
-class View:
+class GameView:
 
     def __init__(self, width, height, margin, screen):
         # Define some colors
@@ -84,7 +84,3 @@ class View:
     def drawButtons(self):
         self.screen.blit(Button.restart, (753, 650))
         self.screen.blit(Button.mainMenu, (986, 650))
-
-
-    def quit(self):
-        pygame.quit()

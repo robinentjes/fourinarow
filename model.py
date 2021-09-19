@@ -2,33 +2,31 @@ import copy
 
 class Board:
 
-    # 6x7 playfield
-    # 0 means no stone in field, 1 is for player one, and -1 is for player two
+    # this file contains all the information, in regards to the game board
+    # the status of the game board is stored as a 2d array, where 0  means that there is no coin,
+    # 1 if there is a coin from player 1 and -1 if there is a coin for player 2
 
     def __init__(self):
         self.__board = [[0 for x in range(7)] for y in range(6)]
         self.__columnFilled = [0 for x in range(7)]
         self.__numberMoves = 0
 
-    # updates the board, returns true if it was successful
-    # its not successful when board is already full
+
     def addStone(self, currentPlayer, column):
         self.__numberMoves += 1
         row = 5 - self.__columnFilled[column]
         self.__board[row][column] = currentPlayer
         self.__columnFilled[column] += 1
-        return True
 
-    def canPlay(self, columnNr):
-        return self.__columnFilled[columnNr] < 6
+
+    def canPlay(self, column):
+        return self.__columnFilled[column] < 6
+
 
     def isWinningMove(self, currentPlayer, column):
         board2 = copy.deepcopy(self)
-        #board2.printBoard()
         if board2.canPlay(column):
             board2.addStone(currentPlayer, column)
-            #board2.printBoard()
-            #print(column)
             return board2.isWin(currentPlayer, column)
         return False
 
@@ -36,14 +34,15 @@ class Board:
     def getBoard(self):
         return self.__board
 
+
     def setCellValue(self, x, y, value):
         self.__board[y][x] = value
 
-    # returns if there is a win
+
+    # returns true if there is a win
     def isWin(self, currentPlayer, lastColumn, verPos = -1):
         if verPos == -1:
             verPos = 5 - (self.__columnFilled[lastColumn] - 1)
-        #print("verpos " + str(verPos))
         horPos = lastColumn
         # check horizontal
         chainLen = 0
@@ -86,6 +85,7 @@ class Board:
             if hor > 6:
                 break
 
+        # check diagonal from bottom left to top right
         hor = 0
         ver = 5
 
@@ -107,13 +107,16 @@ class Board:
                 break
         return False
 
+
     def clearBoard(self):
         self.__board = [[0 for x in range(7)] for y in range(6)]
         self.__columnFilled = [0 for x in range(7)]
         self.__numberMoves = 0
 
+
     def getNumberMoves(self):
         return self.__numberMoves
+
 
     def printBoard(self):
         for y in range(6):
